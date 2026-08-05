@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veterinaria</title>
+     
+    <style>
+        body{
+          max-width: 100vw;
+        }
+        header{
+            background-color:rgb(9, 190, 9);
+            color:rgb(0, 0, 0);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        main{
+            background-color:blanchedalmond;
+            color:rgb(0, 0, 0);
+            margin: 0 auto;
+            padding: 16px;
+        }
+        img{
+          width:80px;
+          height:80px;
+        }
+        article{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          border: 1px solid darkblue;
+          margin: 16px;
+          padding: 16px;
+          flex: 1 1 25%;
+          
+        }
+        .artigo-autor{
+          font-weight: bold;
+        }
+        footer{
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+  <header>
+    <h1>Veterinaria</h1>
+    <p>Vou compartilhar alguns conhecimentos de veterinaria</p>
+  </header>  
+    
+  <main>
+    <article>
+        <img src="primeiro-post.png">
+        <div>
+            <h2>Minha primeira postagem de veterinaria</h2>
+            <p class="artigo-autor"></p> Yasmin Cimas</p>
+            <p>Boas vindas ao meu blog! Vou compartilhar curiosidades 
+               sobre Veterinaria.
+              </p>
+              <button>👍🏼</span>0</span><button>
+              <button>👎🏼</span>0</span><button>
+        </div>
+    </article>
+
+ <article>
+        <img src="segundo-post.png">
+        <div>
+            <h2>Minha primeira consulta na clinica</h2>
+            <p>Por: Yasmin Cimas</p>
+            <p>A consulta veterinária é um momento essencial para garantir o bem-estar dos nossos animais de estimação. Nela, o veterinário avalia a saúde do pet, faz exames de rotina e orienta sobre cuidados preventivos, como vacinas e alimentação adequada. Além de tratar doenças, esse atendimento fortalece o vínculo entre o tutor e o profissional, promovendo uma vida mais saudável e feliz para o animal.
+            </p>
+              <button>👍🏼</span>0</span><button>
+              <button>👎🏼</span>0</span><button>
+        </div>
+    </article>
+
+    <article>
+        <img src="terceiro-post.png">
+        <div>
+            <h2>Mais informações sobre minha clinica</h2>
+            <p class="artigo-autor"></p> Yasmin Cimas</p>
+            <p>Na nossa clinica é um local especializado na prevenção,
+              no diagnostico e no tratamento de doenças e lesões em animais
+              de estimação e outros de pequeno ou grande porte.</p>
+              <button>👍🏼</span>0</span><button>
+              <button>👎🏼</span>0</span><button>
+        </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Todos os direitos estão reservados ao autor do blog.</strong></p>
+  </footer>
+</body>
+<script>
+  const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+</script>
+</html>
